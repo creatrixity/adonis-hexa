@@ -29,6 +29,7 @@
   },
   "devDependencies": {},
   "autoload": {
-    "App": "./app"
+    "App": "./app",
+    "Src": "./src"
   }
 }
