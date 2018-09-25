@@ -10,16 +10,16 @@ const BaseJob = use("Src/Foundation/BaseJob");
 const UserRepository = use("Src/Data/Repositories/UserRepository");
 
 /**
- * Creates a new user.
+ * Fetches a user.
  *
- * **Namespace**: `Src/Domains/User/CreateUserJob` <br />
+ * **Namespace**: `Src/Domains/User/FetchUserJob` <br />
  * **Singleton**: No <br />
  * **Alias**: None
  *
- * @class CreateUserJob
+ * @class FetchUserJob
  * @constructor
  */
-class CreateUserJob extends BaseJob {
+class FetchUserJob extends BaseJob {
   constructor(params) {
     super(params);
   }
@@ -27,17 +27,17 @@ class CreateUserJob extends BaseJob {
   /**
    * Contains code that will be ran when this job is invoked.
    *
-   * @method serve
-   *
-   * @param {Object} Object.request
+   * @method handle
    *
    * @return {Object} Lucid/ORM
    */
-  async handle({ request }) {
+  async handle() {
     const userRepo = new UserRepository();
 
-    return await userRepo.findOrCreate(this.params.data);
+    const user = await userRepo.find(this.params.id);
+
+    return user;
   }
 }
 
-module.exports = CreateUserJob;
+module.exports = FetchUserJob;

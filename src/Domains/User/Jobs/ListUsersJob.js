@@ -20,7 +20,7 @@ const User = use("App/Models/User");
  * @class FetchUserJob
  * @constructor
  */
-class FetchUserJob extends BaseJob {
+class ListUsersJob extends BaseJob {
   constructor(params) {
     super(params);
   }
@@ -35,14 +35,8 @@ class FetchUserJob extends BaseJob {
   async handle() {
     const userRepo = new UserRepository();
 
-    const user = await User.query()
-      .where({ username: this.params.uid })
-      .orWhere({
-        email: this.params.uid
-      });
-
-    return user;
+    return await userRepo.all();
   }
 }
 
-module.exports = FetchUserJob;
+module.exports = ListUsersJob;
