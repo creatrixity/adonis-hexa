@@ -47,4 +47,4 @@ class CreateUserFeature extends BaseFeature {
   }
 }
 
-module.exports = ListUsersFeature;
+module.exports = CreateUserFeature;
