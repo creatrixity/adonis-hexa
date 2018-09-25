@@ -21,7 +21,6 @@ const SERVICES_PATH = '../'
  * @class FoundationServiceProvider
  * @constructor
  */
-
 class FoundationServiceProvider extends ServiceProvider
     /**
      * This method will be called at startup by Adonis.
