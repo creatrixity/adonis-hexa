@@ -31,18 +31,40 @@ Adonis Hexa promotes a micro-services architecture as we may think of our applic
 
 Services contain nearly everything that comes with a barebones Adonis installation as well as some new stuff we'll be introducing.
 
-Below is the bare structure of an Adonis Hexa service.
+### Directory Structure
 
-- **Src/**
-- **Services/**
--       __Api/__
--           __Features/__
--               CreateUserFeature.js
--               FetchUserFeature.js
--               ListUsersFeature.js
--           __Http/__
--           __Providers/__
--           Routes.js
+Below is the bare structure of an example Adonis Hexa application.
+
+```
+src
+├── Data
+    └── Repositories
+            ├── UserRepository.js
+            ├── Repository.js
+    └── Algorithms
+├── Domains
+    └── User
+            └── Jobs
+                ├── CreateUserJob.js
+                ├── FetchUserJob.js
+                ├── ListUsersJob.js
+            └── Validators
+                ├── UserValidator.js
+├── Foundation
+└── Services
+    └── Api
+        ├── Console
+        └── Features
+            ├── CreateUserFeature.js
+            ├── FetchUserFeature.js
+            ├── ListUsersFeature.js
+        └── Http
+            └── Controllers
+                ├── UserController.js
+        └── Providers
+            ├── ApiServiceProvider.js
+        ├── Routes.js
+```
 
 ### Foundation
 
