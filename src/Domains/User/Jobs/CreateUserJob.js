@@ -33,7 +33,7 @@ class CreateUserJob extends BaseJob {
    *
    * @return {Object} Lucid/ORM
    */
-  async handle({ request }) {
+  async handle() {
     const userRepo = new UserRepository();
 
     return await userRepo.findOrCreate(this.params.data);

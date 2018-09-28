@@ -19,7 +19,7 @@ const BaseValidator = use("Src/Foundation/BaseValidator");
  */
 class UserValidator extends BaseValidator {
   /**
-   * Contains validation rules fo creating a user.
+   * Contains validation rules for creating a user.
    *
    * @method rules
    *
