@@ -69,8 +69,8 @@ class FoundationServiceProvider extends ServiceProvider
      *
      * @return {Void}
      */
-    registerRouteController(route, controller, handler='', method='resource', isProtected=false) {
-        const namespace = '@provider:Api/Controllers/Http/';
+    registerRouteController(service, route, controller, handler='', method='resource', isProtected=false) {
+        const namespace = `@provider:${service}/Controllers/Http/`;
 
 				let instance = this.app
 					.use('Route')
@@ -93,7 +93,7 @@ class FoundationServiceProvider extends ServiceProvider
     registerControllerBinding(controller, service='Api') {
         controller = controller.split('.')[0];
         let path = `Src/Services/${service}/Http/Controllers/`;
-        let namespace = `Api/Controllers/Http/${controller}`
+        let namespace = `${service}/Controllers/Http/${controller}`
 
         let resolvedController = use(`${path}${controller}`);
 

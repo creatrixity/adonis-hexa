@@ -6,6 +6,8 @@
 */
 "use strict";
 
+const SERVICE_NAME = "api";
+
 const FoundationServiceProvider = use(
   "Src/Foundation/FoundationServiceProvider"
 );
@@ -60,6 +62,7 @@ class ApiServiceProvider extends FoundationServiceProvider {
               : routeItem.protected;
 
           self.registerRouteController(
+            SERVICE_NAME,
             route,
             controller,
             handler,
@@ -68,7 +71,7 @@ class ApiServiceProvider extends FoundationServiceProvider {
           );
         });
       })
-      .prefix("/api/v1/");
+      .prefix(`/${SERVICE_NAME}/v1/`);
   }
 }
 
