@@ -8,6 +8,7 @@
 
 const SERVICE_NAME = "api";
 
+const utils = use("Src/Foundation/Utilities");
 const FoundationServiceProvider = use(
   "Src/Foundation/FoundationServiceProvider"
 );
@@ -62,7 +63,7 @@ class ApiServiceProvider extends FoundationServiceProvider {
               : routeItem.protected;
 
           self.registerRouteController(
-            SERVICE_NAME,
+            utils.uppercaseFirstChar(SERVICE_NAME),
             route,
             controller,
             handler,
