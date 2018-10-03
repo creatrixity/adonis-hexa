@@ -23,6 +23,7 @@ const providers = [
   "@adonisjs/shield/providers/ShieldProvider",
   "@adonisjs/session/providers/SessionProvider",
   "@adonisjs/auth/providers/AuthProvider",
+  "@adonisjs/vow/providers/VowProvider",
 
   new FoundationServiceProvider().bootstrapServices()
 ];
