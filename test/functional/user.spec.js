@@ -25,8 +25,6 @@ test("Should register a user through the HTTP client", async ({
     .send(data)
     .end();
 
-  return console.log(response);
-
   response.assertStatus(200);
 
   response.assertJSONSubset({
