@@ -3,8 +3,14 @@
 const { test, trait } = use("Test/Suite")("User");
 
 const TEST_EMAIL = "john.doe@example.com";
-const TEST_USERNAME = "kay.mathew";
+const TEST_USERNAME = "john.doe";
 const TEST_PASSWORD = "secretdecrypt";
+
+const data = {
+  username: TEST_USERNAME,
+  email: TEST_EMAIL,
+  password: TEST_PASSWORD
+};
 
 trait("Test/ApiClient");
 
@@ -12,12 +18,6 @@ test("Should register a user through the HTTP client", async ({
   client,
   assert
 }) => {
-  let data = {
-    username: TEST_USERNAME,
-    email: TEST_EMAIL,
-    password: TEST_PASSWORD
-  };
-
   let { username, email } = data;
 
   const response = await client
@@ -50,12 +50,6 @@ test("Should return details about user #1 through the HTTP client", async ({
   client,
   assert
 }) => {
-  let data = {
-    username: TEST_USERNAME,
-    email: TEST_EMAIL,
-    password: TEST_PASSWORD
-  };
-
   let { username, email } = data;
 
   const response = await client.get(`/api/v1/users/1`).end();
