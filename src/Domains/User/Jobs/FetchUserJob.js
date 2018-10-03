@@ -36,7 +36,7 @@ class FetchUserJob extends BaseJob {
 
     const user = await userRepo.find(this.params.id);
 
-    return user;
+    return user.toJSON();
   }
 }
 
