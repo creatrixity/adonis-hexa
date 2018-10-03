@@ -36,7 +36,9 @@ class CreateUserJob extends BaseJob {
   async handle() {
     const userRepo = new UserRepository();
 
-    return await userRepo.findOrCreate(this.params.data);
+    const user = await userRepo.findOrCreate(this.params.data);
+
+    return user.toJSON();
   }
 }
 

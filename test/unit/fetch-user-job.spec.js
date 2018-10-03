@@ -1,8 +1,8 @@
 "use strict";
 
 const { test } = use("Test/Suite")("Fetch User Feature");
-const CreateUserFeature = use("Src/Services/Api/Features/CreateUserFeature");
-const FetchUserFeature = use("Src/Services/Api/Features/FetchUserFeature");
+const CreateUserJob = use("Src/Domains/User/Jobs/CreateUserJob");
+const FetchUserJob = use("Src/Domains/User/Jobs/FetchUserJob");
 
 const RANDOM_INT = Math.random() * 100;
 
@@ -19,9 +19,9 @@ const data = {
 test("Should fetch a user when passed data", async ({ assert }) => {
   const { username, email } = data;
 
-  const createdUser = await new CreateUserFeature({ data }).handle();
+  const createdUser = await new CreateUserJob({ data }).handle();
 
-  const user = await new FetchUserFeature({ id: createdUser.user.id }).handle();
+  const user = await new FetchUserJob({ id: createdUser.id }).handle();
 
   assert.containsAllKeys(user, ["username", "email"]);
 });

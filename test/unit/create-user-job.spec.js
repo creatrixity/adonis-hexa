@@ -1,7 +1,7 @@
 "use strict";
 
-const { test } = use("Test/Suite")("Create User Feature");
-const CreateUserFeature = use("Src/Services/Api/Features/CreateUserFeature");
+const { test } = use("Test/Suite")("Create User Job");
+const CreateUserJob = use("Src/Domains/User/Jobs/CreateUserJob");
 
 const RANDOM_INT = Math.random() * 100;
 
@@ -18,7 +18,7 @@ const data = {
 test("Should create a user object when passed data", async ({ assert }) => {
   const { username, email } = data;
 
-  const userObject = await new CreateUserFeature({ data }).handle();
+  const user = await new CreateUserJob({ data }).handle();
 
-  assert.containsAllKeys(userObject.user, ["username", "email"]);
+  assert.containsAllKeys(user, ["username", "email"]);
 });

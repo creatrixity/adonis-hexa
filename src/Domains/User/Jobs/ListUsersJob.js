@@ -35,7 +35,9 @@ class ListUsersJob extends BaseJob {
   async handle() {
     const userRepo = new UserRepository();
 
-    return await userRepo.all();
+    const users = await userRepo.all();
+
+    return users.toJSON();
   }
 }
 

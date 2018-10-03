@@ -2,8 +2,10 @@
 
 const { test, trait } = use("Test/Suite")("User");
 
-const TEST_EMAIL = "john.doe@example.com";
-const TEST_USERNAME = "john.doe";
+const RANDOM_INT = Math.random() * 100;
+
+const TEST_EMAIL = `john.doe${RANDOM_INT}@example.com`;
+const TEST_USERNAME = `john.doe${RANDOM_INT}`;
 const TEST_PASSWORD = "secretdecrypt";
 
 const data = {
@@ -11,6 +13,8 @@ const data = {
   email: TEST_EMAIL,
   password: TEST_PASSWORD
 };
+
+var uid = 1;
 
 trait("Test/ApiClient");
 
@@ -25,6 +29,7 @@ test("Should register a user through the HTTP client", async ({
     .send(data)
     .end();
 
+  uid = response.body.user.id;
   response.assertStatus(200);
 
   response.assertJSONSubset({
@@ -52,7 +57,7 @@ test("Should return details about user #1 through the HTTP client", async ({
 }) => {
   let { username, email } = data;
 
-  const response = await client.get(`/api/v1/users/1`).end();
+  const response = await client.get(`/api/v1/users/${uid}`).end();
 
   response.assertStatus(200);
 

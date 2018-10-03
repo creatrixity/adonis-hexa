@@ -4,8 +4,10 @@ const { test } = use("Test/Suite")("List Users Feature");
 const CreateUserFeature = use("Src/Services/Api/Features/CreateUserFeature");
 const ListUsersFeature = use("Src/Services/Api/Features/ListUsersFeature");
 
-const TEST_EMAIL = "john.doe@example.com";
-const TEST_USERNAME = "john.doe";
+const RANDOM_INT = Math.random() * 100;
+
+const TEST_EMAIL = `john.doe${RANDOM_INT}@example.com`;
+const TEST_USERNAME = `john.doe${RANDOM_INT}`;
 const TEST_PASSWORD = "secretdecrypt";
 
 const data = {

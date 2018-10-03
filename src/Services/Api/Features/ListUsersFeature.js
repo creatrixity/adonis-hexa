@@ -30,7 +30,7 @@ class ListUsersFeature extends BaseFeature {
    * @return {Object} JSON
    */
   async handle() {
-    return this.run("User/Jobs/ListUsersJob");
+    return await this.run("User/Jobs/ListUsersJob");
   }
 }
 

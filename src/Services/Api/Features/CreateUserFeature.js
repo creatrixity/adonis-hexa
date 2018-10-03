@@ -42,7 +42,7 @@ class CreateUserFeature extends BaseFeature {
     });
 
     return {
-      user: user.toJSON()
+      user
     };
   }
 }
