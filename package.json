@@ -12,7 +12,7 @@
     "adonisjs",
     "adonis-app"
   ],
-  "author": "",
+  "author": "creatrixity <creatrixity@gmail.com>",
   "license": "GPLv3",
   "private": true,
   "dependencies": {
