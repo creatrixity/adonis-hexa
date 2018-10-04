@@ -411,3 +411,20 @@ module.exports = RetrieveUsersJob;
 We use the `pageWhere` method freely available to us thanks to the core Repository class bundled with Adonis Hexa. This allows us to return a fixed number of results in pages just like a search engine would.
 
 We've been able to add a reusable feature alongside two completely reusable jobs. This is the power of Adonis Hexa.
+
+## Tests
+
+To run the test suite, first install the dependencies, then run npm test:
+
+```bash
+npm install
+npm test
+```
+
+## Contributing
+
+Contributions are welcome! Check out the [issues](https://github.com/creatrixity/adonis-hexa/issues) or the [PRs](https://github.com/creatrixity/adonis-hexa/pull-requests), and make your own if you want something that you don't see there.
+
+## License
+
+[GPLv3.0](https://github.com/creatrixity/adonis-hexa)
