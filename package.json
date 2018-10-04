@@ -1,8 +1,8 @@
 {
-  "name": "adonis-fullstack-app",
+  "name": "adonis-hexa",
   "version": "4.1.0",
   "adonis-version": "4.1.0",
-  "description": "The fullstack application boilerplate for Adonisjs",
+  "description": "Adonis Hexa is a software development paradigm for maintaining a scalable application architecture.",
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
@@ -10,11 +10,13 @@
   },
   "keywords": [
     "adonisjs",
-    "adonis-app"
+    "adonis-app",
+    "architecture",
+    "nodejs"
   ],
   "author": "",
-  "license": "UNLICENSED",
-  "private": true,
+  "license": "GPLv3.0",
+  "private": false,
   "dependencies": {
     "@adonisjs/ace": "^5.0.2",
     "@adonisjs/auth": "^3.0.5",
