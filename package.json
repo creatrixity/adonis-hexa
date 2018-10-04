@@ -14,7 +14,7 @@
   ],
   "author": "creatrixity <creatrixity@gmail.com>",
   "license": "GPLv3",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@adonisjs/ace": "^5.0.2",
     "@adonisjs/auth": "^3.0.5",
