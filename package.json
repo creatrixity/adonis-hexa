@@ -2,7 +2,7 @@
   "name": "adonis-hexa",
   "version": "4.1.0",
   "adonis-version": "4.1.0",
-  "description": "Adonis Hexa is a project scaffold that provides an easy-to-use abstraction of the Hexagonal Architecture paradigm.",
+  "description": "Adonis Hexa is a software development paradigm for maintaining a scalable application architecture.",
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
@@ -10,10 +10,13 @@
   },
   "keywords": [
     "adonisjs",
-    "adonis-app"
+    "adonis-app",
+    "architecture",
+    "nodejs"
   ],
+  "author": "",
+  "license": "GPLv3.0",
   "author": "creatrixity <creatrixity@gmail.com>",
-  "license": "GPLv3",
   "private": false,
   "dependencies": {
     "@adonisjs/ace": "^5.0.2",
