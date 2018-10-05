@@ -1,3 +1,5 @@
+![Adonis Hexa Brand](https://preview.ibb.co/g77Gde/hexa_brand.jpg)
+
 # Adonis Hexa
 
 ## Index
