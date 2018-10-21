@@ -15,7 +15,7 @@
     "nodejs"
   ],
   "author": "",
-  "license": "GPLv3.0",
+  "license": "GPLv3",
   "author": "creatrixity <creatrixity@gmail.com>",
   "private": false,
   "dependencies": {
