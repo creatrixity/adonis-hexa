@@ -182,13 +182,13 @@ module.exports = UserValidator;
 
 ## Installation
 
-Simply clone this repository as it provides a boilerplate to get you started.
+Simply run this command to install the global Adonis Hexa project scaffold.
 
 ```bash
-git clone https://github.com/creatrixity/adonis-hexa.git
+npm i --global adonis-hexa@latest
 ```
 
-...then run `npm install`.
+...then run `adonis-hexa new <project-name>` to generate a bespoke Hexa app.
 
 ### Migrations
 
@@ -202,11 +202,13 @@ adonis migration:run
 
 We'll demo a sample application now. We'll be building an Adonis Hexa application that requires us to be able to create users by sending data to an API endpoint, retrieving information for a single user, returning all users within the system and also searching for users through query strings.
 
-First of all, we clone the Adonis Hexa repository as our base boilerplate.
+First of all, run this command to install the global Adonis Hexa project scaffold.
 
 ```bash
-git clone https://github.com/creatrixity/adonis-hexa.git
+npm i --global adonis-hexa@latest
 ```
+
+Next, run `adonis-hexa new <project-name>` to generate a Hexa app. 
 
 We'll be using the wonderful `adonis-search` package to help with our search feature. We'll need to add a dependency to our `package.json` file. Add this line to the `dependencies` object in `package.json`.
 
